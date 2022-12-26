@@ -11,7 +11,7 @@ bot.on("message", msg => {
   const name = username ? `@${username}` : `${first_name} ${last_name}`;
   let count = 0;
   if (msg.new_chat_participant) {
-    const message= `Hello ${name}! Welcome to MUON. Muon is a decentralized Nodes as a service Network that enables running Web2 and Web3 applications, off-chain, on-chain, and cross-chain.`;
+    const message= `Hello ${name}! Welcome to MUON. A decentralized optimistic oracle network. Making messaging & secure data interfacing possible: on-chain, off-chain & cross-chain! `;
 
     try {
     bot.sendMessage(chatId, message, {
