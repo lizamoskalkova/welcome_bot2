@@ -52,7 +52,7 @@ bot.on("message", msg => {
           ],
         ]}}).then((x)=>setTimeout(()=>{
             {bot.deleteMessage(chatId,x.message_id)} 
-          },150000))
+          },20000))
       }
       catch (err) {
         console.log(err)
