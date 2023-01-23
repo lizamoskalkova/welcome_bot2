@@ -44,10 +44,15 @@ bot.on("message", msg => {
               callback_data: "click",
               url: 'https://medium.com/muon'
             },
+            {
+              text: '📚 GitBook ',
+              callback_data: "click",
+              url: 'https://docs.muon.net/muon-network/'
+            },
           ],
         ]}}).then((x)=>setTimeout(()=>{
             {bot.deleteMessage(chatId,x.message_id)} 
-          },15000))
+          },150000))
       }
       catch (err) {
         console.log(err)
