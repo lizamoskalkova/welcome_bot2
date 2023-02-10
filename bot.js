@@ -1,6 +1,6 @@
 import TelegramBot from "node-telegram-bot-api";
 
-const token =  '5907692192:AAHc3f_t9hcHk6vr44O6-b3Gxf1GoJvz_QU';
+const token =  '6056165928:AAFf49K9C34f-H9LgMO9-PvwfFZdgw8E5o4';
 const bot = new TelegramBot(token, { polling: true });
 
 bot.on("message", msg => {
@@ -11,8 +11,7 @@ bot.on("message", msg => {
   const name = username ? `@${username}` : `${first_name} ${last_name}`;
   let count = 0;
   if (msg.new_chat_participant) {
-    const message= `Hello ${name}! Welcome to MUON. A decentralized optimistic oracle network. Making messaging & secure data interfacing possible: on-chain, off-chain & cross-chain! `;
-
+    const message= `Welcome ${name}!\nVitaDAO is a global community (DAO) of scientists and entrepreneurs specialized on funding longevity research. Find out how you can participate and hop onto Discord for more in-depth discussions!`
     try {
     bot.sendMessage(chatId, message, {
       "reply_markup": {
@@ -21,33 +20,23 @@ bot.on("message", msg => {
             {
               text: '🌐 Website ',
               callback_data: "click",
-              url: 'https://www.muon.net'
+              url: 'https://www.vitadao.com/'
             },
             {
               text: "🐦 Twitter ",
-              url: "https://twitter.com/muon_net",
-            },
-            {
-              text: '🗨 Discord ',
-              callback_data: "click",
-              url: 'https://discord.gg/zqUzDNq8St'
+              url: "https://twitter.com/vita_dao",
             },
           ],
           [
             {
-              text: '📣 Announcements',
-              callback_data: "click",
-              url: 'https://t.me/MuonAnn'
-            },
-            {
               text: '📝 Medium ',
               callback_data: "click",
-              url: 'https://medium.com/muon'
+              url: 'https://vitadao.medium.com/'
             },
             {
-              text: '📚 GitBook ',
+              text: '🗨 Discord ',
               callback_data: "click",
-              url: 'https://docs.muon.net/muon-network/'
+              url: 'https://discord.gg/SpCTnnBhGN'
             },
           ],
         ]}}).then((x)=>setTimeout(()=>{
