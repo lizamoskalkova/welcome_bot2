@@ -41,7 +41,7 @@ bot.on("message", msg => {
           ],
         ]}}).then((x)=>setTimeout(()=>{
             {bot.deleteMessage(chatId,x.message_id)} 
-          },20000))
+          },30000))
       }
       catch (err) {
         console.log(err)
