@@ -13,6 +13,7 @@ bot.on("message", msg => {
   if (msg.new_chat_participant) {
     const message= `Welcome ${name}!\nVitaDAO is a global community (DAO) of scientists and entrepreneurs specialized on funding longevity research. Find out how you can participate and hop onto Discord for more in-depth discussions!`
     try {
+    setTimeout (() => {
     bot.sendMessage(chatId, message, {
       "reply_markup": {
         "inline_keyboard": [
@@ -42,7 +43,7 @@ bot.on("message", msg => {
         ]}}).then((x)=>setTimeout(()=>{
             {bot.deleteMessage(chatId,x.message_id)} 
           },30000))
-      }
+      }, 30000)}
       catch (err) {
         console.log(err)
       }        
